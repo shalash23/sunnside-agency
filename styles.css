@@ -39,11 +39,29 @@ h2 {
 
 body {
   min-height: 100vh;
-  background-color: black;
+  /* background-color: black; */
 }
 
-main{
-    display:grid;
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+section {
+  background-color: var(--White);
+  min-height: 70vh;
+}
+
+section .image {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  background-image: url("./images/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 header {
@@ -52,9 +70,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background-image: url("./images/desktop/image-header.jpg");
-  height: 671px;
-  background-size:100% 650px ;
+  background-size: 100% 650px;
   background-position: top;
   background-repeat: no-repeat;
 }
@@ -64,6 +80,17 @@ header nav {
   justify-content: space-between;
   width: 23em;
   align-items: center;
+  display: none;
+}
+ul {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+}
+ul li {
+  font-size: 1.2rem;
+  color: var(--White);
+  font-family: var(--fraunces);
 }
 
 header nav button {
@@ -75,15 +102,99 @@ header nav button {
   background-color: var(--White);
 }
 
-ul {
-  display: flex;
-  gap: 1em;
-  list-style: none;
+header .hamburger-menu {
+  cursor: pointer;
 }
-ul li {
-  font-size: 1.2rem;
-  color: var(--White);
-  font-family: var(--fraunces);
+
+section .container {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+section .container img {
+  height: 114px;
+  width: 36px;
+  margin-top: 2em;
+}
+
+.wrapper {
+  padding: 1em;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.wrapper h2 {
+  font-family: var(--barlow);
+  color: var(--Dark-blue);
+  font-weight: 900;
+}
+
+.wrapper p {
+  line-height: 1.8;
+}
+
+.wrapper button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 4px solid var(--Yellow);
+  font-family: var(--barlow);
+  color: var(--Dark-blue);
+  font-weight: 900;
+}
+
+.wrapper .btn-2 {
+  border-bottom: 4px solid var(--Soft-red);
+}
+
+.graphic-design {
+  background-image: url("./images/mobile/image-graphic-design.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.photography {
+  background-image: url("./images/mobile/image-photography.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.graphic {
+  padding: 2em;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.graphic h2 {
+  color: var(--Dark-desaturated);
+}
+
+.graphic p {
+  color: var(--Dark-desaturated);
+  margin-top: 1em;
+}
+
+.client-testimonials h3 {
+  color: var(--Grayish-blue);
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100%;
 }
 
 /* Footer */
