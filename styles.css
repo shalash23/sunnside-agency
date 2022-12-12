@@ -224,6 +224,7 @@ section .container img {
 }
 
 .footer {
+  margin-top: 2em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -248,6 +249,34 @@ section .container img {
   background-image: url("./images/mobile/image-gallery-cone.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.sitemap {
+  background-color: #90d4c5;
+  display: flex;
+  height: 50%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sitemap svg {
+  margin-top: 5em;
+}
+
+.sitemap ul {
+  display: flex;
+  gap: 3em;
+}
+
+.sitemap ul li {
+  color: var(--Dark-desaturated);
+}
+
+.icons {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /* Footer */
