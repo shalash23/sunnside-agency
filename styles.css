@@ -219,6 +219,11 @@ section .container img {
   color: var(--Very-dark);
   /* margin-top: 1em; */
 }
+
+.testimonial h4 {
+  font-family: var(--barlow);
+  color: var(--Dark-desaturated);
+}
 .testimonial h5 {
   color: var(--Grayish-blue);
 }
@@ -301,6 +306,10 @@ section .container img {
     background-image: url("./images/desktop/image-header.jpg");
     grid-column: span 2;
   }
+
+  section .container {
+    margin: 0;
+  }
   .egg-picture {
     grid-column: 1;
     grid-row: 2;
@@ -322,12 +331,17 @@ section .container img {
     grid-column: span 2;
   }
 
+  .client-testimonials h3 {
+    margin-top: 2em;
+  }
+
   .testimonials {
     grid-template-columns: repeat(3, 1fr);
+    padding: 1em;
   }
 
   .testimonial {
-    padding: 0;
+    padding: 1em 2em;
     margin: 0;
     justify-content: space-evenly;
     gap: 0;
