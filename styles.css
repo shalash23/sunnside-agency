@@ -305,10 +305,15 @@ section .container img {
   .header {
     background-image: url("./images/desktop/image-header.jpg");
     grid-column: span 2;
+    min-height: 100vh;
   }
 
   section .container {
     margin: 0;
+  }
+
+  .graphic-design {
+    min-height: 100vh;
   }
   .egg-picture {
     grid-column: 1;
@@ -355,9 +360,9 @@ section .container img {
   }
 
   .footer {
-    min-height: 100vh;
     grid-column: span 2;
-    grid-row: span 2;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
   }
 
   .sitemap {
