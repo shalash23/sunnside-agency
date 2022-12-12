@@ -1,0 +1,24 @@
+{
+  "name": "frontend-mentor",
+  "version": "1.0.0",
+  "description": "Front-end Mentor Challenge",
+  "main": "script.js",
+  "scripts": {
+    "start": "postcss styles.css -o output.css -m"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shalash23/sunnside-agency.git"
+  },
+  "author": "Mohamed Shalash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shalash23/sunnside-agency/issues"
+  },
+  "homepage": "https://github.com/shalash23/sunnside-agency#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
+    "postcss-cli": "^10.1.0"
+  }
+}
