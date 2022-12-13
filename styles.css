@@ -205,6 +205,8 @@ section .container img {
 
 .wrapper p {
   line-height: 1.8;
+  padding: 2em;
+  width: 80%;
 }
 
 .wrapper button {
@@ -374,9 +376,32 @@ section .container img {
 }
 
 @media screen and (min-width: 871px) {
-  #navigation-menu {
-    /* display:none; */
+  .hamburger-menu {
+    display: none;
   }
+  #navigation-menu {
+    display: flex;
+    position: relative;
+    transform: translateX(0);
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+  #navigation-menu ul {
+    display: flex;
+    padding: 0;
+  }
+  #navigation-menu ul li {
+    padding: 0;
+    color: var(--White);
+  }
+
+  header nav button {
+    padding: 0.3em 1em;
+    /* transform: translateY(-5%); */
+    background-color: var(--White);
+  }
+
   main {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(6, 1fr) 0.7q5fr;
