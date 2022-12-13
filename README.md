@@ -48,7 +48,7 @@ More into responsive design and media queries
 
 ### Useful resources
 
-- [overflow-x](https://stackoverflow.com/questions/14270084/overflow-xhidden-doesnt-prevent-content-from-overflowing-in-mobile-browsers) - This helped me in removing the overflow issues with responsive nav-bar
+- [Overflow-x](https://stackoverflow.com/questions/14270084/overflow-xhidden-doesnt-prevent-content-from-overflowing-in-mobile-browsers) - This helped me in removing the overflow issues with responsive nav-bar
 - [Clamp Calculator](https://royalfig.github.io/fluid-typography-calculator/) - This is an amazing calculator to calculate the clamp values for responsive typography which is always a pain
 
 ## Author
