@@ -37,18 +37,23 @@ h2 {
   color: var(--Very-dark);
 }
 
+html,
 body {
   min-height: 100vh;
   max-width: 100vw;
+  /* overflow-x: hidden; */
 
   /* background-color: black; */
 }
+/* .entire-wrapper {
+  overflow-x: hidden;
+  position: relative;
+} */
 
 main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  /* overflow: hidden; */
 }
 section {
   background-color: var(--White);
@@ -65,7 +70,6 @@ section .image {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  
 }
 
 header {
@@ -74,40 +78,44 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background-size: 100% 650px;
+  /* background-size: 100% 650px; */
   background-position: top;
   background-repeat: no-repeat;
 }
-
-
+/* 
 header nav {
   display: none;
   justify-content: space-between;
   width: 23em;
   align-items: center;
-}
+} */
 
-
-#navigation-menu{
-  display:inline-block;
-  /* flex-direction: column; */
-  position:fixed;
-  top:75px;
-  height:auto;
-  /* right:100px; */
-  /* top:0; */
-  /* right:100px; */
+#navigation-menu {
+  display: inline-block;
+  position: fixed;
+  height: auto;
+  top: 5%;
+  right: 5%;
   background-color: var(--White);
   border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.4);
-  opacity: 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  opacity: 1;
   z-index: 999;
-  /* transform: translateX(190px); */
   transition: all 1s linear;
+  overflow: hidden;
 }
 
-#navigation-menu::after{
-/*   
+.is-active {
+  transform: translateX(0);
+}
+
+.is-hidden {
+  transform: translateX(200%);
+  overflow: hidden;
+}
+
+/* #navigation-menu::after {
+    
   content: "";
   position:absolute;
   right:25px;
@@ -115,36 +123,36 @@ header nav {
   width:20px;
   border-top-left-radius: inset 80%;
   border-top-right-radius: 50%;
-  box-shadow: 0 0 0 25px var(--White); */
-  	content: '';
-	position: absolute;
-	top: 1%;
-	left: 91%;
-	width: 0;
-	height: 0;
-	border: 45px solid transparent;
-	border-bottom-color: var(--White);
-	border-top: 0;
-	border-right: 0;
-	margin-left: -22.5px;
-	margin-top: -45px;
-}
+  box-shadow: 0 0 0 25px var(--White);
+  content: "";
+  position: absolute;
+  top: 1%;
+  left: 91%;
+  width: 0;
+  height: 0;
+  border: 45px solid transparent;
+  border-bottom-color: var(--White);
+  border-top: 0;
+  border-right: 0;
+  margin-left: -22.5px;
+  margin-top: -45px;
+} */
 
 ul {
   gap: 2em;
-  padding:2em;
+  padding: 2em;
   list-style: none;
 }
 ul li {
-  display:block;
+  display: block;
   font-size: 1.2rem;
   color: var(--Very-dark);
   font-family: var(--fraunces);
-  padding:1em;
+  padding: 1em;
   cursor: pointer;
 }
-ul li:hover{
-  color:var(--Dark-blue);
+ul li:hover {
+  color: var(--Dark-blue);
   cursor: pointer;
 }
 
@@ -157,7 +165,7 @@ header nav button {
   box-shadow: 0 0 3px var(--Very-dark);
   background-color: var(--Yellow);
 }
-header nav button:hover{
+header nav button:hover {
   box-shadow: 0.5px 0.5px 8px var(--Very-dark);
 }
 
@@ -294,7 +302,12 @@ section .container img {
   grid-template-rows: 1fr 1fr;
 }
 
-.footer-images1 {
+.footer img {
+  height: 100%;
+  width: 100%;
+}
+
+/* .footer-images1 {
   background-image: url("./images/mobile/image-gallery-milkbottles.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -313,7 +326,7 @@ section .container img {
   background-image: url("./images/mobile/image-gallery-cone.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 .sitemap {
   background-color: #90d4c5;
@@ -343,9 +356,9 @@ section .container img {
   justify-content: space-evenly;
 }
 
-.container-site__map{
-  padding:4em;
-  display:flex;
+.container-site__map {
+  padding: 4em;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -361,13 +374,12 @@ section .container img {
 }
 
 @media screen and (min-width: 871px) {
-
-  #navigation-menu{
+  #navigation-menu {
     /* display:none; */
   }
   main {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(6,1fr) 0.7q5fr;
+    grid-template-rows: repeat(6, 1fr) 0.7q5fr;
   }
 
   section {
@@ -440,13 +452,13 @@ section .container img {
   .sitemap {
     grid-column: span 2;
     /* padding:5em; */
-    
   }
 
-  .footer-images1 {
-    background-image: url("./images/desktop/image-gallery-milkbottles.jpg");
-  }
-  .footer-images2 {
+  /* .footer-images1 { */
+  /* background-image: url("./images/desktop/image-gallery-milkbottles.jpg"); */
+
+  /* } */
+  /* .footer-images2 {
     background-image: url("./images/desktop/image-gallery-orange.jpg");
   }
   .footer-images4 {
@@ -454,5 +466,5 @@ section .container img {
   }
   .footer-images3 {
     background-image: url("./images/desktop/image-gallery-cone.jpg");
-  }
+  } */
 }
